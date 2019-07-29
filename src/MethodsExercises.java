@@ -39,7 +39,19 @@ public class MethodsExercises {
         System.out.println(multiplication(9,4));
         System.out.println(division(20,5));
         System.out.println(modulus(100,25));
-        getInteger(1, 10);
+
+        long theFactorial = getInteger(1,10);
+        long helpfulInt = theFactorial;
+        for(long i = 1; i < helpfulInt; i++){
+            theFactorial = theFactorial * i;
+        }
+        Scanner sc2 = new Scanner(System.in);
+        System.out.print("Would you like to continue [y/N] ");
+        String userInput2 = sc2.next();
+        boolean newConfirmation = userInput2.equals("y");
+        if(newConfirmation){
+            System.out.println("The Factorial of " + helpfulInt + " is " + theFactorial);
+        }
     }
 }
 

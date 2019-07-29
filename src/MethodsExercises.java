@@ -1,22 +1,27 @@
 import java.util.Scanner;
 
+
+//    visibility ownership ReturnType medthodName(ParamType paramName,...) {
+//    return something if the ReturnType is something other than void
+//        }
+
 public class MethodsExercises {
-    public static double addition(int a, int b){
+    public static double addition(double a, double b){
         return a + b;
     }
-    public static double subtraction(int c, int d){
+    public static double subtraction(double c, double d){
         return c - d;
     }
-    public static double multiplication (int e, int f){
+    public static double multiplication (double e, double f){
         return e * f;
     }
-    public static double division (int g, int h){
+    public static double division (double g, double h){
         return g / h;
     }
-    public static int modulus (int i, int j){
+    public static double modulus (double i, double j){
         return i % j;
     }
-    public static int getInteger(int min, int max) {
+    public static int getInteger(double min, double max) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between " + min + " and " + max);

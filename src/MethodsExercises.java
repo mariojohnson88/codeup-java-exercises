@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.*;
+
 //    visibility ownership ReturnType medthodName(ParamType paramName,...) {
 //    return something if the ReturnType is something other than void
 //        }
@@ -29,7 +29,8 @@ public class MethodsExercises {
     public static double modulus (double i, double j){
         return i % j;
     }
-    static void randomIntegers() {
+
+   public static void randomIntegers() {
         double randomDouble = Math.random();
         randomDouble = randomDouble * 12 + 1;
         int randomInt = (int) randomDouble;
@@ -54,6 +55,12 @@ public class MethodsExercises {
                 return userInput;
             }
         } while(true);
+
+
+
+//        Recursive version
+//        answer + scanner.next(System.in);
+//        if (answer < min || answer > max) return getInteger(1,10);
     }
     public static void main(String[] args) {
         System.out.println(addition(4,9));
@@ -63,10 +70,10 @@ public class MethodsExercises {
         System.out.println(modulus(100,25));
 
 
-        long theFactorial = getInteger(1,15);
-        long helpfulInt = theFactorial;
+        long factorial = getInteger(1,10);
+        long helpfulInt = factorial;
         for(long i = 1; i < helpfulInt; i++){
-            theFactorial = theFactorial * i;
+            factorial *= i;
 
 
         }
@@ -75,11 +82,11 @@ public class MethodsExercises {
         String willTheyContinue = scanner2.next();
         boolean newConfirmation = willTheyContinue.equalsIgnoreCase("y");
         if(newConfirmation){
-            System.out.println("The Factorial of " + helpfulInt + " is " + theFactorial);
+            System.out.println("The Factorial of " + helpfulInt + " is " + factorial);
 
-            Scanner scanner3 = new Scanner(System.in);
+//            Scanner scanner3 = new Scanner(System.in);
             System.out.println("How about trying your luck, wanna roll the dice?: [y/N] ");
-            String diceQuestion = scanner3.next();
+            String diceQuestion = scanner2.next();
             boolean diceConformation = diceQuestion.equalsIgnoreCase("y");
             if (diceConformation) {
                 System.out.println("First off. How many sides are on a pair if dice? ");
@@ -93,7 +100,7 @@ public class MethodsExercises {
                         System.out.println("Okay, come on now. WAY too many!");
                     } else if (howManySides == sides) {
                         System.out.println("Nice! You might out as well roll the dice. \"DO IIITTT\" -Shia Labouf: [y/N]");
-                        String rollDice = scanner3.next();
+                        String rollDice = scanner2.next();
                         boolean newestConfirmation = rollDice.equalsIgnoreCase("y");
                         if(newestConfirmation){
                             System.out.print("You rolled a: ");

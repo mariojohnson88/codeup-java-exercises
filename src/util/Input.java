@@ -25,7 +25,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        System.out.print("Enter a number between " + min + " and " + max);
+        System.out.print("Enter an integer between " + min + " and " + max);
         do {
             double userInput = scanner.nextInt();
 
@@ -40,7 +40,7 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Give me an integer: ");
+        System.out.println("Give me any integer: ");
         return this.scanner.nextInt();
     }
 
@@ -57,6 +57,13 @@ public class Input {
                 return (int)userInput;
             }
         } while(true);
+    }
+
+    public static double getDouble(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number for the area and circumference: ");
+        double inputDec = scanner.nextDouble();
+        return inputDec;
     }
 
     public double getDouble() {

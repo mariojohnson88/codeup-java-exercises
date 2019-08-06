@@ -98,7 +98,7 @@ public class GradesApplication {
     public static void showStudents(){
         System.out.println("Here are the GitHub usernames of our students:");
         for( String username: students.keySet()) {
-            System.out.println(username + " | ");
+            System.out.print(username + " | ");
         }
         System.out.println();
     }

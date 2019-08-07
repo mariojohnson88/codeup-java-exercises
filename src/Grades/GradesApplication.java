@@ -80,20 +80,31 @@ public class GradesApplication {
 
 
 //        the Fer way
-        System.out.println("Welcome:\n");
+        System.out.println("Welcome!\n");
 
         showStudents();
 
+        boolean cont = true;
 
+        do{
 
-        String key = input.getString("What student would you like to see more information on?");
-        if(students.containsKey(key)){
-            System.out.println("Name: " + students.get(key).getName() + " - GitHub" + key);
-            System.out.println("Current Average: " + students.get(key).getGradeAverage());
-        } else {
-            System.out.println("Sorry, no student found with the GitHub username of" + key);
-        }
+            String key = input.getString("What student would you like to see more information on?");
+
+            if(students.containsKey(key)){
+                System.out.println("Name: "+ students.get(key).getName() +" - GitHub Username: " + key );
+                System.out.println("Current Average: " + students.get(key).getGradeAverage());
+            } else {
+                System.out.println("Sorry, no student found with the GitHub username of " + key);
+            }
+
+            cont = input.yesNo("Would you like to see another student?");
+
+        }while(cont);
+
+        System.out.println("Goodbye, and have a wonderful day!\n");
+
     }
+
 
     public static void showStudents(){
         System.out.println("Here are the GitHub usernames of our students:");

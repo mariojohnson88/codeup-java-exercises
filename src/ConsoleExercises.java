@@ -4,6 +4,8 @@ public class ConsoleExercises {
     public static void main(String[] args) {
         double pi = 3.14159;
         System.out.format("The value of pi is approximately %.2f%n" ,pi);
+//        The ".2" after the modulus tells the CLI how many decimals points should be included in the output
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a whole number: ");

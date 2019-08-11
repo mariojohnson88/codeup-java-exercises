@@ -20,9 +20,8 @@ public class Input {
 
     public boolean yesNo(){
         System.out.println("Please decide yes or no: [y/N] ");
-        String answer = scanner.next();
-        boolean newConfirmation = answer.contains("y");
-        if (newConfirmation) {
+        String answer = scanner.nextLine();
+        if (answer.contains("y")) {
             return true;
         } else {
             return false;
